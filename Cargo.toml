@@ -7,3 +7,17 @@ readme = "README.md"
 description = "Color quantization library to reduce n colors to 256 colors."
 repository = "https://github.com/PistonDevelopers/color_quant.git"
 edition = "2018"
+
+[dependencies.sgx_tstd]
+features = ["thread"]
+git = "https://github.com/apache/teaclave-sgx-sdk"
+rev = "v1.1.1"
+
+[dependencies.testing]
+branch = "rsgx1.1.1"
+git = "https://github.com/sammyne/testing-rsgx"
+optional = true
+
+[features]
+default = []
+with-testing = ["testing"]
