@@ -60,6 +60,13 @@ that this copyright notice remain intact.
 //! let color_map = nq.color_map_rgba();
 //! ```
 //!
+
+#![no_std]
+
+#[macro_use]
+extern crate sgx_tstd as std;
+use std::prelude::v1::*;
+
 use std::cmp::{max, min};
 
 macro_rules! clamp(
